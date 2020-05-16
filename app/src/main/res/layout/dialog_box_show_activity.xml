@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:background="#00FFFFFF">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/playDialogContainerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.9"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/longitudeValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="0.000"
+                android:textAllCaps="true"
+                android:textSize="18sp"
+                android:typeface="normal"
+                app:layout_constraintStart_toEndOf="@+id/longitudeTextView"
+                app:layout_constraintTop_toTopOf="@+id/longitudeTextView" />
+
+            <TextView
+                android:id="@+id/latitudeValueTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="0.000"
+                android:textAllCaps="true"
+                android:textSize="18sp"
+                android:typeface="normal"
+                app:layout_constraintStart_toEndOf="@+id/latitudeTextView"
+                app:layout_constraintTop_toTopOf="@+id/latitudeTextView" />
+
+            <TextView
+                android:id="@+id/activityIDTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:fontFamily="sans-serif-black"
+                android:text="Activity ID"
+                android:textAlignment="viewStart"
+                android:textAllCaps="true"
+                android:textColor="@color/colorPrimary"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:typeface="normal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/latitudeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="Latitude :  "
+                android:textAlignment="viewStart"
+                android:textAllCaps="true"
+                android:textSize="18sp"
+                android:typeface="normal"
+                app:layout_constraintStart_toStartOf="@+id/activityIDTextView"
+                app:layout_constraintTop_toBottomOf="@+id/activityIDTextView" />
+
+            <TextView
+                android:id="@+id/longitudeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif-condensed-light"
+                android:text="Longitude :  "
+                android:textAllCaps="true"
+                android:textSize="18sp"
+                android:typeface="normal"
+                app:layout_constraintStart_toStartOf="@+id/latitudeTextView"
+                app:layout_constraintTop_toBottomOf="@+id/latitudeTextView" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/deleteContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintEnd_toStartOf="@+id/cancelContainer"
+                app:layout_constraintTop_toBottomOf="@+id/longitudeValueTextView"
+                app:layout_constraintTop_toTopOf="@+id/cancelContainer">
+
+                <Button
+                    android:id="@+id/deleteMarkerButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/design_default_color_background"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="Delete"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/holo_red_light"
+                    android:textSize="18sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cancelContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/longitudeTextView">
+
+                <Button
+                    android:id="@+id/dialogBoxCancelButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/design_default_color_background"
+                    android:fontFamily="sans-serif-condensed-light"
+                    android:text="Cancel"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/holo_red_light"
+                    android:textSize="18sp" />
+            </androidx.cardview.widget.CardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
