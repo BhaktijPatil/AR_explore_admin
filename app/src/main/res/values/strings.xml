@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">AR Explore Admin</string>
     <string name="title_activity_map_control_panel">Map</string>
+    <string name="title_activity_a_r_control_panel">ActivityARControlPanel</string>
+    <string name="ar_activity_tab_1">Add</string>
+    <string name="ar_activity_tab_2">Modify</string>
 </resources>

@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         CardView rewardsButton = findViewById(R.id.rewardsCardView);
         CardView challengesButton = findViewById(R.id.challengesCardView);
         CardView statisticsButton = findViewById(R.id.statisticsCardView);
+        CardView activityARButton = findViewById(R.id.activityCardView);
 
         // Initiate control panel for Map
         mapButton.setOnClickListener(v -> {
@@ -34,18 +35,60 @@ public class MainActivity extends AppCompatActivity {
                 Intent mapActivityIntent = new Intent(MainActivity.this, MapControlPanelActivity.class);
                 startActivity(mapActivityIntent);
             }
+            else
+            {
+                Toast.makeText(this, "Access Denied.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        // Initiate control panel for AR activities
+        activityARButton.setOnClickListener(v -> {
+            if(access.equals("ALL"))
+            {
+                Intent activityARActivityIntent = new Intent(MainActivity.this, ARControlPanelActivity.class);
+                startActivity(activityARActivityIntent);
+            }
+            else
+            {
+                Toast.makeText(this, "Access Denied.", Toast.LENGTH_SHORT).show();
+            }
         });
 
         // Initiate control panel for Reward
         rewardsButton.setOnClickListener(v -> {
             if(access.equals("ALL") || access.equals("VENDOR"))
             {
-                Intent rewardsActivityIntent = new Intent(MainActivity.this, MapControlPanelActivity.class);
-                startActivity(rewardsActivityIntent);
+                Toast.makeText(this, "Coming Soon ...", Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
+                Toast.makeText(this, "Access Denied.", Toast.LENGTH_SHORT).show();
             }
         });
 
+        // Initiate control panel for statistics
+        statisticsButton.setOnClickListener(v -> {
+            if(access.equals("ALL"))
+            {
+                Intent statisticsActivityIntent = new Intent(MainActivity.this, StatisticsActivity.class);
+                startActivity(statisticsActivityIntent);
+            }
+            else
+            {
+                Toast.makeText(this, "Access Denied.", Toast.LENGTH_SHORT).show();
+            }
+        });
 
-
+        // Initiate control panel for challenges
+        challengesButton.setOnClickListener(v -> {
+            if(access.equals("ALL"))
+            {
+                Toast.makeText(this, "Coming Soon ...", Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
+                Toast.makeText(this, "Access Denied.", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

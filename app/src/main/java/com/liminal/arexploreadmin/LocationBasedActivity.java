@@ -1,11 +1,11 @@
 package com.liminal.arexploreadmin;
 
-class LocationBasedActivity {
-    long markerID;
-    String activityID;
-    String activityName;
-    double latitude;
-    double longitude;
+public class LocationBasedActivity {
+    public long markerID;
+    public String activityID;
+    public String activityName;
+    public double latitude;
+    public double longitude;
 
     LocationBasedActivity(long markerID, String activityID, String activityName, double latitude, double longitude){
         this.markerID = markerID;
@@ -15,7 +15,7 @@ class LocationBasedActivity {
         this.activityID = activityID;
     }
 
-    LocationBasedActivity(String activityID, String activityName) {
+    public LocationBasedActivity(String activityID, String activityName) {
         this.activityID = activityID;
         this.activityName = activityName;
     }

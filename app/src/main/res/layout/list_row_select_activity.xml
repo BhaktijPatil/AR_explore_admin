@@ -40,7 +40,7 @@
                 android:id="@+id/activityButton"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="24dp"
                 android:background="#00FFFFFF"
                 android:fontFamily="sans-serif-condensed-light"
                 android:text="Activity Name"

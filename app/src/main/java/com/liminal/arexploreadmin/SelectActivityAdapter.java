@@ -110,7 +110,7 @@ public class SelectActivityAdapter extends RecyclerView.Adapter<SelectActivityAd
         }
     }
 
-    SelectActivityAdapter(List<LocationBasedActivity> activityARList, MapControlPanelActivity.ClickListener clickListener){
+    public SelectActivityAdapter(List<LocationBasedActivity> activityARList, MapControlPanelActivity.ClickListener clickListener){
         this.activityARList = activityARList;
         this.clickListener = clickListener;
     }
