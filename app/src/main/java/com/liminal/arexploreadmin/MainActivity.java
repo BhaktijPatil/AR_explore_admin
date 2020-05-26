@@ -58,7 +58,8 @@ public class MainActivity extends AppCompatActivity {
         rewardsButton.setOnClickListener(v -> {
             if(access.equals("ALL") || access.equals("VENDOR"))
             {
-                Toast.makeText(this, "Coming Soon ...", Toast.LENGTH_SHORT).show();
+                Intent rewardActivityIntent = new Intent(MainActivity.this, RewardsActivity.class);
+                startActivity(rewardActivityIntent);
             }
             else
             {

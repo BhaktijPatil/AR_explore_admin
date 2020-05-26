@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/row_padding_vertical"
+    android:paddingLeft="@dimen/row_padding_horizontal"
+    android:paddingRight="@dimen/row_padding_horizontal"
+    android:paddingTop="@dimen/row_padding_vertical">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title" />
+
+    <TextView
+        android:id="@+id/cost"
+        android:layout_width="119dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/description" />
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="63dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/description"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/cost" />
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="197dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/description"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_toEndOf="@+id/quantity" />
+
+    <Button
+        android:id="@+id/update"
+        android:layout_width="32dp"
+        android:layout_height="27dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="6dp"
+        android:background="@drawable/edit"
+        android:layout_toEndOf="@+id/title"/>
+
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="32dp"
+        android:layout_height="27dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="12dp"
+        android:layout_toEndOf="@+id/update"
+        android:background="@drawable/delete" />
+
+</RelativeLayout>

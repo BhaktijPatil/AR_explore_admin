@@ -4,4 +4,10 @@
     <string name="title_activity_a_r_control_panel">ActivityARControlPanel</string>
     <string name="ar_activity_tab_1">Add</string>
     <string name="ar_activity_tab_2">Modify</string>
+    <string-array name="categories_array">
+        <item>Food</item>
+        <item>Fitness</item>
+        <item>Entertainment</item>
+        <item>Travel</item>
+    </string-array>
 </resources>
