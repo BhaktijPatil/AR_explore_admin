@@ -16,7 +16,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".RewardsActivity"></activity>
+        <activity
+            android:name=".ChallengesActivity"
+            android:label="@string/title_activity_challenges"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".RewardsActivity" />
         <activity android:name=".StatisticsActivity" />
         <activity
             android:name=".ARControlPanelActivity"

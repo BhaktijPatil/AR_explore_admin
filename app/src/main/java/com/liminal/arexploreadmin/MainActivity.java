@@ -84,7 +84,8 @@ public class MainActivity extends AppCompatActivity {
         challengesButton.setOnClickListener(v -> {
             if(access.equals("ALL"))
             {
-                Toast.makeText(this, "Coming Soon ...", Toast.LENGTH_SHORT).show();
+                Intent activityARActivityIntent = new Intent(MainActivity.this, ChallengesActivity.class);
+                startActivity(activityARActivityIntent);
             }
             else
             {

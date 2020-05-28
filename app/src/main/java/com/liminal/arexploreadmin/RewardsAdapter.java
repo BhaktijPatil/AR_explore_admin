@@ -5,18 +5,14 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -31,7 +27,8 @@ public class RewardsAdapter extends RecyclerView.Adapter<RewardsAdapter.MyViewHo
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.reward_list_row, parent, false);
+                .inflate(R.layout.list_row_reward, parent, false);
+        context = parent.getContext();
         databaseReference = FirebaseDatabase.getInstance().getReference().child("rewardsTable");
         return new MyViewHolder(itemView);
     }
@@ -100,8 +97,7 @@ public class RewardsAdapter extends RecyclerView.Adapter<RewardsAdapter.MyViewHo
         }
     }
 
-    RewardsAdapter(List<RewardDetails> rewardDetailsList, Context context){
+    RewardsAdapter(List<RewardDetails> rewardDetailsList){
         this.rewardDetailsList = rewardDetailsList;
-        this.context = context;
     }
 }

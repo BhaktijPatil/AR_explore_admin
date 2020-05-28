@@ -44,7 +44,7 @@ public class RewardsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_rewards);
 
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        rewardsAdapter = new RewardsAdapter(rewardDetailsList, this);
+        rewardsAdapter = new RewardsAdapter(rewardDetailsList);
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
         recyclerView.setLayoutManager(mLayoutManager);
         recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
