@@ -265,9 +265,8 @@ public class MapControlPanelActivity extends FragmentActivity implements OnMapRe
                         long lastLocationIndex = dataSnapshot.child(selectedActivityID).child("locations").getChildrenCount() + 1;
 
                         // Add new marker
-                        locationBasedActivityTableReference.child(selectedActivityID).child("locations").child(String.valueOf(lastLocationIndex)).child("latitude").setValue(latLng.latitude);
-                        locationBasedActivityTableReference.child(selectedActivityID).child("locations").child(String.valueOf(lastLocationIndex)).child("longitude").setValue(latLng.longitude);
-
+                        MapMarker mapMarker = new MapMarker(latLng.latitude, latLng.longitude, "", 0);
+                        locationBasedActivityTableReference.child(selectedActivityID).child("locations").child(String.valueOf(lastLocationIndex)).setValue(mapMarker);
                     }
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
