@@ -5,10 +5,12 @@
     <string name="ar_activity_tab_1">Add</string>
     <string name="ar_activity_tab_2">Modify</string>
     <string-array name="categories_array">
-        <item>Food</item>
-        <item>Fitness</item>
-        <item>Entertainment</item>
-        <item>Travel</item>
+        <item>holidays</item>
+        <item>style</item>
+        <item>sustainable</item>
+        <item>food</item>
+        <item>health</item>
+        <item>freebies</item>
     </string-array>
     <string name="title_activity_challenges">ChallengesActivity</string>
     <string name="tab_text_1">Daily Challenges</string>
